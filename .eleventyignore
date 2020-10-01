@@ -1,0 +1,13 @@
+gulpfile.babel.js
+gulp_tasks
+src/assets
+tailwind.config.js
+paths.js
+npm-debug.log
+package.json
+package-lock.json
+README.md
+LICENSE
+.editorconfig
+.babelrc
+.prettierrc

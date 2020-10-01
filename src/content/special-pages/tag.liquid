@@ -1,0 +1,25 @@
+---
+layout: default
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    filter:
+      - articles
+      - all
+permalink: /articles/tag/{{ tag }}/
+content-description: Tag-based archive page of articles by {% getOwnerInfo 'name' %}
+eleventyComputed:
+  title: "Archive of articles with tag '{{tag}}'"
+---
+<div>
+	{% include page-title title:title %}
+	<main>
+		{% assign articles = collections.articles | byTag: tag %}
+		<ul class="articles">
+			{% for article in articles %}
+    			{% include article-card article:article %}
+			{% endfor %}
+		</ul>
+	</main>
+</div>
